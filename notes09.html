@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commit Messages</title>
+</head>
+<body>
+    <h1>Commit Messages</h1>
+    <h3>05112023</h3>
+    <h3><a href="https://www.theodinproject.com/lessons/foundations-commit-messages">Odin Project Page</a></h3>
+    <h4>Why Commit Messages Matter</h4>
+    <ul>
+    <li>Employers will review commit messages in your github when you apply.</li>
+    <li>Commit messages will allow other developers on a project to look specifically through your changes when a bug arises.</li>
+    <li>Good CMs will allow you to pick up a project where you left off after time away.</li>
+    <li>A diff will tell you <em>what</em> changed, but only the commit message can properly tell you <em>why</em>.</li>
+    </ul>
+
+    <h4>When to Commit</h4>
+    <p>When writing code, it’s considered best practice to commit every time you have a meaningful change in the code.</p>
+    <p>make a commit when you get a piece of code to function as intended</p>
+ 
+    <h4>Tips</h4>
+    <ul>
+        <li>Use active voice "fix card generator"</li>
+        <li>Avoid vague messages like "saved" or "updated"</li>
+        <li>Commit early and often!</li>
+    </ul>
+
+    <h2>Content from <a href="https://cbea.ms/git-commit/">"How to Write a Git Commit Message"</a></h2>
+
+    <h4>How to Ensure good commit messages</h4>
+    <ul>Before beginning a project a team should agree to a convention for CMs that defines at least the
+        <li>Style. Markup syntax, wrap margins, grammar, capitalization, punctuation. 
+            Spell these things out, remove the guesswork, and make it all as simple as possible.</li>
+        <li>Content. What <em>should</em> the messages contain, and what should they <em>not</em> contain?</li>
+        <li>Metadata. How should issue tracking IDs, pull request numbers, etc. be referenced?</li>
+    </ul>
+
+    <h4>The Seven Rules of a Great Git Commit Message</h4>
+    <ol>
+        <li>Separate subject from body with a blank line</li>
+        <li>Limit the subject line to 50 characters</li>
+        <li>Capitalize the subject line</li>
+        <li>Do not end the subject line with a period</li>
+        <li>Use the imperative mood in the subject line</li>
+        <li>Wrap the body at 72 characters</li>
+        <li>Use the body to explain what and why vs. how</li>
+    </ol>
+
+    <h5>1. Subject and Body</h5>
+        <p>Some commits only require a subject, such as "fix typo in opening paragraph of "About" page.</p>
+        <p>Having a logline separated from the body makes it easy to print out just the subject using commands in a CLI, such as "git shortlog" and "git log --oneline".</p>
+        <p>CMs longer than just a subject are difficult to type using the -m condition in the command line, and should be typed out in a text editor.</p>
+
+    <h5>2. 50 characters</h5>
+        <p>Not a hard rule, but forces author to keep it concise and readable</p>
+        <p>Git warns if over 50, caps at 72</p>
+
+    <h5>3. Capitalize</h5>
+        <p>Just the first letter of the subject line</p>
+        <p>It keeps it looking nice and emphasizes the convention is being used</p>
+
+    <h5>4. No period in subject line</h5>
+        <p>Unnecessary, especially with limited characters</p>
+
+    <h5>5. Imperative mood</h5>
+        <p>As if giving a command</p>
+        <p>"Fix typo in opening paragraph" vs "Fixed typo in opening paragraph"</p>
+        <p>This convention cuts down on characters, forces more direct thinking and communication, and follows the convention used by git autocommit</p>
+        <p>Think "<em>If applied, this commit will </em><strong>YOUR COMMIT SUBJECT LINE HERE</strong>"</p>
+        <P>ie. "If applied this commit will <em>fix the typo in the opening paragraph"</em></P>
+
+    <h5>6. Wrap at 72 chars</h5>
+        <p>Git doesn't auto wrap at the edge - 80 characters.</p>
+        <p>Wrapping manually at 72cs allows git to fit with an indent at 80</p>
+        <p>Text editors can assist in wrapping and be set to auto wrap CM bodies.</p>
+
+    <h5>7. What and Why vs How</h5>
+        <p>Code is generally self explanatory as to how.</p>
+        <p>If code change (what) isn't self explanatory given the why, use a source comment to justify the how.</p>
+   
+    <h3><a href="notes08.html">Back</a></h3>
+    <h3><a href="notes10.html">Next</a></h3>
+    <h3><a href="./index.html">Home</a></h3>
+</body>
+</html>
