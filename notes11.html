@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="udf-8">
+        <title>CSS 2: The Cascade</title>
+        <link href="./css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>CSS 2: The Cascade</h1>
+        <h3>June 5, 2023</h3>
+        <h3><a href="https://www.theodinproject.com/lessons/foundations-the-cascade" target="_blank">Odin Project Lesson</a></h3>
+        <h3>Specificity</h3>    
+
+            <p>Sometimes CSS styles will conflict and the way that the browser determines who wins is called the cascade.</p>
+            <p>Each selector has a value and those values determine their specificity in being applied over other styles.</p>
+            <ul>Some selectors and their values
+                <li>Type: 1</li>
+                <li>Class: 10</li>
+                <li>ID: 100</li>
+                <li>In-line: 1000</li>
+            </ul>
+            <p>This means that 101 type selectors would be required to override an ID applied style, or 11 class selectors (according to the video).</p>
+            <p>According to the lesson, specificity is not comparative - the ID selector will beat any number of class selectors.</p>
+            <p>The specificity of a rule is determined by the value of the element it applies to, as well as the number of selectors.</p>
+                <ul>
+                    <li>The Value of a selector is first to determine specificity.
+                        An ID specified rule will take precedence over class.
+                    </li>
+                    <li>The number of selectors will also apply.
+                        A rule aimed at two classes will precede a rule aimed at a single class.
+                        A rule aimed at an ID and two classes will precede a rule aimed at the same ID and only one class.
+                    </li>
+                    <li>The Universal Selector has no value, and any rules applying to all will only take effect if no other rules apply to an element.</li>
+                </ul>
+        <h3>Inheritance</h3>
+            <p>If a style is applied to an element that contains another element, that style will <em>usually</em> be applied to the descendant elements.</p>
+            <p>Most typography based properties such as color and font will be inherited, while most other properties will not.</p>
+            <p>Inheritance can be easily overridden, as a style applied to a descendant element always takes precedence.
+                Even if the parent is an ID and the child is class, the rule applying to the class will take precedence 
+                (unless the rule is a combinator applying specifically to the child)
+            </p>
+        <h3>Rule Order</h3>
+            <p>The last aspect of the cascade determines which rule takes precedence if the specifictiy is the same.</p>
+            <p>When multiple styles are applied in a conflicting manner and are equally specific, whichever one is last (ie lower in the stylesheet) takes precedence.</p>
+        <div>
+            
+        </div>    
+        <h3 class="direction"><a href="index.html">Home</a></h3>
+        <h3 class="direction"><a href="notes10.html">Previous</a></h3>
+        <h3 class="direction"><a href="notes12.html">Next</a></h3>
+    </body>
+</html>

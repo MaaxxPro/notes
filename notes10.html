@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>CSS 1</title>
+</head>
+<body>
+    <h1>Intro to CSS</h1>
+    <h3>May 23, 2023</h3>
+    <h3><a href="https://www.theodinproject.com/lessons/foundations-intro-to-css" target="_blank">Odin Project Lesson</a></h3>
+
+    <p>At the most basic level, CSS is made up of various rules. 
+        These rules are made up of a selector (more on this in a bit) and a semi-colon separated list of declarations, with each of those declarations being made up of a property:value pair.</p>
+    <img src="./img/css01.jpg" alt="colored structure of css rule" class="center">
+    <h2>Selectors</h2>
+        <p>HTML elements to which CSS rules are being applied.
+        There are many kinds of selectors. Below are some of the most common.
+        </p>
+        <ul>
+            <li><strong>Universal Selector </strong>
+                <p>(*) Will select elements of any type. "* { property: value;}</p>
+            </li>
+            <li><strong>Type Selector (aka Element Selector)</strong>
+                <p>Will select elements of the specified type ie. " div { property: value; }</p>
+            </li>
+            <li><strong>Class Selector</strong> 
+                <p>Select all elements with the given class, 
+                which is just an attribute you place on an HTML element.</p>
+                <p>The syntax for class selectors: a <em>period</em> immediately followed by the case-sensitive value of the class attribute. 
+                    Classes aren’t required to be unique, so you can use the same class on as many elements as you want.</p>
+                <p>Another thing you can do with the class attribute is to add multiple classes to a single element as a space-separated list, such as class="alert-text severe-alert". 
+                    Since whitespace is used to separate class names like this, you should never use spaces for multi-worded names and should use a hyphen instead.</p>
+                <img src="./img/class-selector.jpg" alt="Instance of class selector in both html and accompanying css">
+            </li>        
+            <li><strong>ID Selectors (#)</strong> 
+                <p>Similar to class selectors. They select an element with the given ID, which is another attribute you place on an HTML element.</p>
+                <p>Instead of a period, syntax uses a <em>hash</em> before ID selector.</p>
+                <p>The major difference between classes and IDs is that <em>an element can only have one ID.</em></p> 
+                <p>An ID cannot be repeated on a single page, and the ID attribute should not contain any whitespace at all.</p>
+                <img src="./img/id-selector.jpg" alt="id selector in html and css">
+            </li>
+            <li><strong>Grouping Selector (Either/Or -comma single space-)</strong> 
+                <p>Elements that share some of the same declarations can be grouped together, separated by a comma.</p>
+                <p>.turtle, .frog { color: green;}</p>
+                <p>Elements that fit one selector <em>or</em> the other would be</p>
+                <p> Individual selectors would then be listed individually.</p>
+                <img src="./img/group-selector.jpg" alt="use of grouping selector to simplify, with explanation from odin project.">
+            </li>
+            <li><strong>Chaining Selectors (AND -no spaces-)</strong>
+                <p>You can string together multiple selectors with no spaces.</p>
+                <p>Doing so will apply to all selectors that has one type <em>and</em> the other.</p>
+                <p>.turtles.frogs { color: green: }</p>
+                <p>.turtles#crocs {...}</p>
+                <p>Does not work with more than one Type Selector, because the lack of syntax leaves no way to specify between the two, and so it will look for a sinlge element with both names combined.</p>
+                <p>Type = Lizard, type = Newt : chain = LizardNewt ...</p>
+
+            </li>
+            <li><strong>Descendent Combinator ("Within" -single space-)</strong></li>
+                <p>Combinators allow multiple selectors to be specified in different, more specific ways than chaining or grouping.</p>
+                <p>There are 4 types of combinators.</p>
+                <p>Descendent combinators will choose selectors that fall underneath other selectors, in a parent/ancestor-child relationship.</p>
+                <p>Syntax is selectors separated by a single space: .parent .child {...}</p>
+                <p>This would mean it would select only selectors designated .child if they are embedded at any level within the .parent directory.</p>
+                <p>No limit to how many combinators can be used, though excessive nesting can get messy and tricky.</p>
+        </ul>
+
+    <h2>Properties</h2>
+        <p>Many properties in CSS (such as color) that get utilised. Below are some of the most commonly used, and a good place to start.</p>
+
+        <ul>
+            <li><strong>Color and Background Color</strong></li>
+                <p>Color sets an element's color, and Background Color sets the background color.</p>
+                <p>Each can accept several kinds of values, such as a keyword (ie "red" or "transparent").</p>
+                <p>Also accept HEX, RGB, and HSL values.</p>
+                <p><a href="https://www.w3schools.com/cssref/css_colors_legal.php" target="_blank">More on CSS colors and how to specify them HERE</a></p>
+
+        <h3>Typography Basics and Text Align</h3>
+            <li><strong>font-family</strong></li>
+                <p>"font-family" can be single value, or <em>comma separated</em> list of values that determine an element's font.</p>
+                <p>Font value is either <strong>Font Family Name</strong> utilizing <em>quotes</em> such as "Times New Roman"
+                or a <strong>Generic Family Name</strong> which never use quotes, such as sans-serif;</p>
+                <p>If a browser does not support the first font in a list, it will go to the next, etc.
+                    It is best practice to start with font you want, and end with generic font as fallback.
+            <li><strong>font-size</strong></li>
+                    <p>Sets font size, d'uh</p>
+                    <p>value is number and "px" with no spaces.</p>
+                    <p>"font-size: 24px"</p>
+            <li><strong>font-weight</strong></li>
+                <p>Affects <strong>boldness</strong> assuming the specified font supports.</p>
+                <p>font-weight: bold, or a number between 1 and 1000, usually a rounded 100 (bold = 700).</p>
+            <li><strong>text-align</strong></li>
+                <p>Aligns text horizontally within an element.</p>
+                <p>Values correspond with familiar phrases (right, left, center)</p>
+                <p>text-align: center</p>
+
+        <h3>Image Height and Width</h3>
+            <p>Default height and width value equal those of original image.</p>
+            <p>To adjust size with same proportion, set height value to auto.</p>
+            <p>Specifying both elements of image will prevent the page from shifting after the image loads.</p>
+            <img src="./img/img-adjust.jpg" alt="syntax for adjusting height and width of img in css">
+            
+        </ul>
+    <h2>Adding CSS to HTML</h2>
+        <h3>Three methods to add CSS to HTML</h3>
+
+        <h4>External CSS</h4>
+            <p>Most common.</p>
+            <p>Create a separate file for CSS and link it inside the head, with a link element.</p>
+            <img src="./img/external-css.jpg" alt="Commands for embedding external css">
+            <p>href is the relative source of the css file, and rel defines the relationship between the two.</p>
+            <p>Inside styles file, we have selectors (div and p) followed by curly braces -- this is the "declaration block."
+                Inside the declaration block we place declarations such as "color: white;"
+                where "color" is the property and "white" is the value. </p>
+            <ul>Pros to this method:
+                <li>Keeps html and css separate, making html file smaller, everything is cleaner.</li>
+                <li>CSS is consolidated and only needs to be edited in one place, which is handy for websites with multiple pages sharing similar styles.</li>
+            </ul>
+        
+        <h4>Internal CSS</h4>
+            <img src="./img/internal-css.jpg" alt="an example of internal css">
+            <p>CSS is placed inside "style" (inside alligator brackets) tags, embedded within the head. </p>
+            <p>No need for external link.</p>
+            <p>Syntax is same as with external method.</p>
+            <p>Useful for adding style to single page.</p>
+            <p>If a lot of declarations made, the html file can get quite large.</p>
+
+        <h4>Inline CSS</h4>
+            <p>Used to add CSS elements directly to an individual html element.</p>
+            <p>Good for adding a <em>unique</em> style to a <em>single</em> element.</p>
+            <img src="./img/inline-css.jpg" alt="example of inline css being used within the body of an html page">
+            <p>NO selectors used, styles are added directly to html tag within pointy brackets.</p>
+            <p>Attributes within quotes on same line, instead of in curly braces.</p>
+            <p>Reasons to avoid this method:</p>
+                <ul>
+                    <li>Gets messy if multiple declarations made</li>
+                    <li>If style to be repeated at all, must be copy/pasted for each use, and altered at each instance if changes desired.</li>
+                    <li>Instances of inline css will override other css.</li>
+                </ul>
+
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank">Mozilla Lesson on CSS Values and Units</a>
+
+    <h3 class="direction"><a href="index.html">Home</a></h3>
+    <h3 class="direction"><a href="notes09.html">Previous</a></h3>
+    <h3 class="direction"><a href="notes11.html">Next</a></h3>
+
+</body>
+</html>

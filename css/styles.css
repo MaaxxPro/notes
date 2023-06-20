@@ -1,0 +1,34 @@
+
+body {
+    width: 800px;
+    border: 2px solid darkblue;
+    background-color: ivory;
+    font-family:'Courier New', Courier, monospace
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+.index-note {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.index-focus {
+    font-style: bold;
+    font-size: 36px;
+}
+
+.direction {
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+}
